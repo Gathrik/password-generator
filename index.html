@@ -2,11 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
     <link href="styles.css" type="text/css" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <h2 class="title">Password Generator</h2>
+    </header>
 
+    <main>
+        <div class="password-view container">
+            <h2 class="generated-password">PTx1f5DaFX</h2>
+        </div>
+
+        <div class="password-settings container">
+            <div class="character-length-container">
+                <h2 class="character-length">Character Length<span id="length-value"></span></h2>
+            </div>
+            <div class="slide-container">
+                <input class="slider" id="myRange" max="20" min="1" type="range" value="10">
+            </div>
+            <div class="checkboxes">
+                <label class="checkbox-container">
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                    Include Uppercase Letters
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Include Lowercase Letters
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Include Numbers
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Include Symbols
+                </label>
+            </div>
+            <div class="strength-container">
+                <h2>STRENGTH</h2>
+                <h2 class="password-strength">MEDIUM</h2>
+            </div>
+            <button class="generate-password-button">GENERATE →</button>
+        </div>
+    </main>
 <script src="script.js"></script>
 </body>
 </html>

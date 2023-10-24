@@ -1,3 +1,235 @@
+/* Base */
 * {
     box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Ki-Bold;
+    src: url('./fonts/Ki-Bold.otf');
+}
+
+@font-face {
+    font-family: Ki-ExtraBold;
+    src: url('./fonts/Ki-ExtraBold.otf');
+}
+
+@font-face {
+    font-family: Ki-Regular;
+    src: url('./fonts/Ki-Regular.otf');
+}
+
+:root {
+    --main-bg-color: hsl(250, 14%, 8%);
+    --main-container-color: hsl(248, 10%, 15%);
+    --main-grey: hsl(248, 14%, 58%);
+    --main-lime-green: #A8FDB1;
+}
+
+main {
+
+}
+
+body {
+    display: flex;
+    background-color: var(--main-bg-color);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    background-color: var(--main-container-color);
+    margin-bottom: 20px;
+    padding: 5%;
+}
+
+.password-view {
+    align-items: center;
+}
+
+.password-settings {
+    flex-direction: column;
+}
+
+/* Strength container */
+
+.strength-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: var(--main-grey);
+    background-color: hsl(248, 15%, 11%);
+    line-height: 0;
+    padding: 5%;
+    margin: 20px 0;
+}
+
+.password-strength {
+    color: white;
+}
+
+/* Button */
+
+.generate-password-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 100%;
+    height: 50px;
+    background-color: var(--main-lime-green);
+    font-family: Ki-Bold, sans-serif;
+    font-size: 16px;
+}
+
+/*Range Slider*/
+
+.slide-container {
+    display: flex;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.slider {
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background: var(--main-lime-green);
+    border: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 30px; /* Set a specific slider handle width */
+    height: 30px; /* Slider handle height */
+    border-radius: 50%;
+    background: white; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 10px; /* Set a specific slider handle width */
+    height: 10px; /* Slider handle height */
+    border-radius: 50%;
+    background: white; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+/* Checkboxes */
+
+.checkboxes {
+    margin-top: 10px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-family: Ki-Bold, sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 16px;
+    user-select: none;
+}
+
+.checkbox-container input {
+    display: none;
+}
+
+.checkmark {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 3px solid #ccc;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-right: 20px;
+}
+
+.checkbox-container input:checked + .checkmark {
+    border-color: var(--main-lime-green);
+    background-color: var(--main-lime-green);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 8px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-container input:checked + .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    content: "";
+    position: absolute;
+    left: 25%;
+    top: -15%;
+    width: 5px;
+    height: 15px;
+    border: solid black;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+}
+
+/* Text */
+
+h1,
+h2,
+h3,
+label {
+    display: flex;
+    font-family: Ki-Regular, sans-serif;
+}
+
+header h2 {
+    font-size: 18px;
+    color: var(--main-grey);
+}
+
+.strength-container h2 {
+    font-size: 18px;
+}
+
+h2 span {
+    margin: 0 0 0 auto;
+    font-size: 24px;
+    color: var(--main-lime-green);
+}
+
+h2.character-length {
+    font-size: 16px;
+    color: white;
+    align-items: center;
+    margin: 0;
+}
+
+.password-view h2 {
+    font-size: 24px;
+    line-height: 0;
+    color: white;
+}
+
+/* Mobile */
+@media screen and (max-width: 375px) {
+    main {
+        width: 90%;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 376px) {
+    main {
+        width: 60%;
+    }
 }
