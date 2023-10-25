@@ -41,7 +41,7 @@ body {
     display: flex;
     background-color: var(--main-container-color);
     margin-bottom: 20px;
-    padding: 5%;
+    padding: 16px;
 }
 
 .password-view {
@@ -83,6 +83,10 @@ body {
     font-size: 16px;
 }
 
+.generate-password-button:hover {
+    box-shadow: 0 2px 2px 0;
+}
+
 /*Range Slider*/
 
 .slide-container {
@@ -110,8 +114,8 @@ body {
 }
 
 .slider::-moz-range-thumb {
-    width: 10px; /* Set a specific slider handle width */
-    height: 10px; /* Slider handle height */
+    width: 30px; /* Set a specific slider handle width */
+    height: 30px; /* Slider handle height */
     border-radius: 50%;
     background: white; /* Green background */
     cursor: pointer; /* Cursor on hover */

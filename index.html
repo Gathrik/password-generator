@@ -13,7 +13,7 @@
 
     <main>
         <div class="password-view container">
-            <h2 class="generated-password">PTx1f5DaFX</h2>
+            <h2 id="view-password" class="generated-password"></h2>
         </div>
 
         <div class="password-settings container">
@@ -24,32 +24,32 @@
                 <input class="slider" id="myRange" max="20" min="1" type="range" value="10">
             </div>
             <div class="checkboxes">
-                <label class="checkbox-container">
-                    <input type="checkbox" checked="checked">
+                <label id class="checkbox-container">
+                    <input id="uppercaseCheckbox" type="checkbox" checked="checked">
                     <span class="checkmark"></span>
                     Include Uppercase Letters
                 </label>
                 <label class="checkbox-container">
-                    <input type="checkbox">
+                    <input id="lowercaseCheckbox" type="checkbox">
                     <span class="checkmark"></span>
                     Include Lowercase Letters
                 </label>
                 <label class="checkbox-container">
-                    <input type="checkbox">
+                    <input id="numbersCheckbox" type="checkbox">
                     <span class="checkmark"></span>
                     Include Numbers
                 </label>
                 <label class="checkbox-container">
-                    <input type="checkbox">
+                    <input id="symbolsCheckbox" type="checkbox">
                     <span class="checkmark"></span>
                     Include Symbols
                 </label>
             </div>
             <div class="strength-container">
                 <h2>STRENGTH</h2>
-                <h2 class="password-strength">MEDIUM</h2>
+                <h2 id="strength" class="password-strength">MEDIUM</h2>
             </div>
-            <button class="generate-password-button">GENERATE →</button>
+            <button id="generate" class="generate-password-button">GENERATE →</button>
         </div>
     </main>
 <script src="script.js"></script>
